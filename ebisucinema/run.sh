@@ -40,6 +40,8 @@ ncol=41    # フレームの幅
 nrow=41    # フレームの高さ
 msec=50    # フレームあたりの時間（ミリ秒）
 wtime=500  # 起動時の待ち時間（ミリ秒）
+dframe=24  # 各文字を表示するフレーム数
+step=5     # 
 
 ######################################################################
 # 本体処理
@@ -50,45 +52,45 @@ wtime=500  # 起動時の待ち時間（ミリ秒）
   {
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/e.txt" -o"0,0"                    |
-    repeat.sh -n"24"                                                 |
-    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/circlecrd.txt" -s5
+    repeat.sh -n"$dframe"                                            |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/bi.txt" -o"0,0"                   |
-    repeat.sh -n"24"                                                 |
-    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/circlecrd.txt" -s5
+    repeat.sh -n"$dframe"                                            |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/su.txt" -o"0,0"                   |
-    repeat.sh -n"24"                                                 |
-    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/circlecrd.txt" -s5
+    repeat.sh -n"$dframe"                                            |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/shi.txt" -o"0,0"                  |
-    repeat.sh -n"24"                                                 |
-    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/circlecrd.txt" -s5
+    repeat.sh -n"$dframe"                                            |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/ne.txt" -o"0,0"                   |
-    repeat.sh -n"24"                                                 |
-    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/circlecrd.txt" -s5
+    repeat.sh -n"$dframe"                                            |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
         
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/ma.txt" -o"0,0"                   |
-    repeat.sh -n"24"                                                 |
-    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/circlecrd.txt" -s5
+    repeat.sh -n"$dframe"                                            |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
     # しばらく待つ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    repeat.sh -n"20"
+    repeat.sh -n"$dframe"
 
     cat "text/icon.txt"                                              |
     repeat.sh -n24
   }                                                                  |
 
   # 色アルファベットに変換
-  tr '□' 'Ｋ'                                                       |
   tr '■' 'Ｗ'                                                       |
+  tr '□' 'Ｋ'                                                       |
 
   # アスキーエスケープシーケンスに変換
   color2escseq.sh                                                    |
