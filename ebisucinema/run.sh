@@ -39,9 +39,9 @@ clear_screen
 ncol=41    # フレームの幅
 nrow=41    # フレームの高さ
 msec=50    # フレームあたりの時間（ミリ秒）
-wtime=500  # 起動時の待ち時間（ミリ秒）
+wtime=1000 # 起動時の待ち時間（ミリ秒）
 dframe=24  # 各文字を表示するフレーム数
-step=5     # 
+step=5     # カウンターの表示ピクセルの増分
 
 ######################################################################
 # 本体処理
@@ -50,31 +50,37 @@ step=5     #
 # サブプロセスに切り離して描画を実行
 (
   {
+    # ヱ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/e.txt" -o"0,0"                    |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
+    # ビ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/bi.txt" -o"0,0"                   |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
+    # ス
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/su.txt" -o"0,0"                   |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
+    # シ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/shi.txt" -o"0,0"                  |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
+    # ネ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/ne.txt" -o"0,0"                   |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
-        
+
+    # マ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
     overwrite.sh -r"$nrow" -f"text/ma.txt" -o"0,0"                   |
     repeat.sh -n"$dframe"                                            |
@@ -82,10 +88,10 @@ step=5     #
 
     # しばらく待つ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    repeat.sh -n"$dframe"
+    repeat.sh -n"16"
 
-    cat "text/icon.txt"                                              |
-    repeat.sh -n24
+    # ヱビスシネマのアイコン
+    repeat.sh -n"$dframe" "text/icon.txt"
   }                                                                  |
 
   # 色アルファベットに変換
