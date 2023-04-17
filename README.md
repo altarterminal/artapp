@@ -1,5 +1,8 @@
 # artapp
 
+## entrance（かがみの孤城）
+![デモ画像](./figure/entrance.gif)
+
 ## koihahikari（恋は光）
 ![デモ画像](./figure/koihahikari.gif)
 
