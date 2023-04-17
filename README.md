@@ -2,6 +2,11 @@
 
 ## かがみの孤城
 
+### traumerei
+トロイメライのオルゴール
+
+![デモ画像](./figure/traumerei.gif)
+
 ### entrance
 城への入り口である鏡
 
