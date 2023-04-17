@@ -1,17 +1,22 @@
 # artapp
 
-## entrance（かがみの孤城）
+## かがみの孤城
+### entrance
 ![デモ画像](./figure/entrance.gif)
 
-## koihahikari（恋は光）
+## 恋は光
+### koihahikari
 ![デモ画像](./figure/koihahikari.gif)
 
-## gyoro（エブリシング・エブリウェア・オール・アット・ワンスのギョロ目）
+## エブリシング・エブリウェア・オール・アット・ワンス
+### gyoro
 ![デモ画像](./figure/gyoro.gif)
 
-## doppler（ドップラー効果のような波紋）
+## 映画館
+### ebisucinema（ヱビスシネマの宣伝）
+![デモ画像](./figure/ebisucinema.gif)
+
+## ほか
+### doppler（ドップラー効果のような波紋）
 ![デモ画像](./figure/doppler.gif)
 
-## ebisucinema（ヱビスシネマの宣伝）
-
-![デモ画像](./figure/ebisucinema.gif)
