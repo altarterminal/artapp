@@ -15,7 +15,7 @@
 ![デモ画像](./figure/key.gif)
 
 ### traumerei
-トロイメライのオルゴール
+トロイメライのディスクオルゴール
 
 ![デモ画像](./figure/traumerei.gif)
 
@@ -23,6 +23,11 @@
 城への入り口である鏡
 
 ![デモ画像](./figure/entrance.gif)
+
+### otona
+大丈夫、大人になって。
+
+![デモ画像](./figure/otona.gif)
 
 ### docchi
 閉城日（3/30）に城は閉じるの？閉じないの？
@@ -46,7 +51,7 @@
 ## 映画館
 
 ### ebisucinema
-ヱビスシネマの宣伝
+ヱビスシネマはいいぞ
 
 ![デモ画像](./figure/ebisucinema.gif)
 
