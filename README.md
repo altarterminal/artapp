@@ -76,6 +76,11 @@ Road! Aim!! Shoot!!!
 
 ![デモ画像](./figure/doppler.gif)
 
+### shootingstar
+現実の流れ星が見えないから自分で降らす
+
+![デモ画像](./figure/shootingstar.gif)
+
 ### countdown
 カウントダウン
 
