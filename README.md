@@ -37,7 +37,7 @@
 ## RRR
 
 ### flag
-Road! Aim!! Shoot!!!
+Load! Aim!! Shoot!!!
 
 ![デモ画像](./figure/flag.gif)
 
