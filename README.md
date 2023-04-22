@@ -14,7 +14,7 @@
 - nm-jp/artbase
 - nm-jp/artfilter
 
-## 作品集
+## 作品一覧
 
 ### アイの歌声を聴かせて
 
