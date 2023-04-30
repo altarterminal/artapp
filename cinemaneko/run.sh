@@ -36,12 +36,10 @@ clear_screen
 # 設定
 ######################################################################
 
-ncol=50    # フレームの幅
-nrow=40    # フレームの高さ
+ncol=51    # フレームの幅
+nrow=41    # フレームの高さ
 msec=50    # フレームあたりの時間（ミリ秒）
-wtime=500 # 起動時の待ち時間（ミリ秒）
-dframe=100  # 各文字を表示するフレーム数
-step=2     # カウンターの表示ピクセルの増分
+wtime=1000 # 起動時の待ち時間（ミリ秒）
 
 ######################################################################
 # 本体処理
@@ -50,10 +48,47 @@ step=2     # カウンターの表示ピクセルの増分
 # サブプロセスに切り離して描画を実行
 (
   {
+    # シ
+    canbas.sh -r"$nrow" -c"$ncol"                                    |
+    overwrite.sh -r"$nrow" -f"text/shi.txt" -o"0,0"                  |
+    repeat.sh -n"24"                                                 |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"5"
+
+    # ネ
+    canbas.sh -r"$nrow" -c"$ncol"                                    |
+    overwrite.sh -r"$nrow" -f"text/ne.txt" -o"0,0"                   |
+    repeat.sh -n"24"                                                 |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"5"
+
+    # マ
+    canbas.sh -r"$nrow" -c"$ncol"                                    |
+    overwrite.sh -r"$nrow" -f"text/ma.txt" -o"0,0"                   |
+    repeat.sh -n"24"                                                 |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"5"
+
+    # ネ
+    canbas.sh -r"$nrow" -c"$ncol"                                    |
+    overwrite.sh -r"$nrow" -f"text/ne.txt" -o"0,0"                   |
+    repeat.sh -n"24"                                                 |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"5"
+
+    # コ
+    canbas.sh -r"$nrow" -c"$ncol"                                    |
+    overwrite.sh -r"$nrow" -f"text/ko.txt" -o"0,0"                   |
+    repeat.sh -n"24"                                                 |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"5"
+
+    # インターバル
+    canbas.sh -r"$nrow" -c"$ncol"                                    |
+    repeat.sh -n"10"
+
     # シネマネコのアイコン
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    repeat.sh -n"$dframe"                                            |
-    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/crd.txt" -s"$step"
+    repeat.sh -n"55"                                                 |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/iconcrd.txt" -s"3"
+
+    # アイコンの表示を維持
+    repeat.sh -n"20" "text/icon.txt"
   }                                                                  |
 
   # 色アルファベットに変換

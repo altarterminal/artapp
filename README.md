@@ -100,6 +100,12 @@ Load! Aim!! Shoot!!!
 
 ![デモ画像](./figure/ebisucinema.gif)
 
+#### cinemaneko
+シネマネコはいいぞ
+
+![デモ画像](./figure/cinemaneko.gif)
+
+
 ### ほか
 
 #### doppler
