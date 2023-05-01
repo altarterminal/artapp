@@ -107,10 +107,15 @@ Load! Aim!! Shoot!!!
 
 ### ミリオンライブ
 
-#### パピヨン
+#### papillon
 今最高の一枚ができましたのでぜひご確認ください
 
 ![デモ画像](./figure/papillon.gif)
+
+#### misakichan
+美咲ちゃん製造中
+
+![デモ画像](./figure/misakichan.gif)
 
 ### ほか
 
