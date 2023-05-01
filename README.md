@@ -105,6 +105,12 @@ Load! Aim!! Shoot!!!
 
 ![デモ画像](./figure/cinemaneko.gif)
 
+### ミリオンライブ
+
+#### パピヨン
+今最高の一枚ができましたのでぜひご確認ください
+
+![デモ画像](./figure/papillon.gif)
 
 ### ほか
 
