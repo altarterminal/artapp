@@ -51,7 +51,7 @@ wtime=1000 # 起動時の待ち時間（ミリ秒）
   repeat.sh -n"60" "text/papillon.txt"                               |
 
   # 対象ピクセルの色を徐々に変化させる
-  ../kagami/colorwave.sh -n"5" -r"$nrow"                             |
+  ../tool/colorwave.sh -n"5" -r"$nrow"                               |
   
   # 背景の見た目を変換
   tr '□' 'Ｋ'                                                       |

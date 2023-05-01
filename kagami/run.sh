@@ -53,7 +53,7 @@ thin=3     # 各色の太さ
   repeat.sh -n"$nrep" "text/kagami.txt"                              |
 
   # 対象ピクセルの色を徐々に変化させる
-  ./colorwave.sh -r"$nrow" -n"$thin"                                 |
+  ../tool/colorwave.sh -r"$nrow" -n"$thin"                           |
   
   # 色指定のアルファベットをエスケープシーケンスに変換
   color2escseq.sh                                                    |
