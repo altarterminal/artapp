@@ -28,6 +28,11 @@
 
 ![デモ画像](./figure/utaou.gif)
 
+#### darius
+ダリウス風車
+
+![デモ画像](./figure/darius.gif)
+
 ### かがみの孤城
 
 #### kagami

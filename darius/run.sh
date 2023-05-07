@@ -37,11 +37,11 @@ clear_screen
 ######################################################################
 
 ncol=33    # フレームの幅
-nrow=31    # フレームの高さ
+nrow=35    # フレームの高さ
 axis=17    # 軸列番号
-msec=50    # フレームあたりの表示時間（ミリ秒）
-wtime=1000  # 起動時の待ち時間（ミリ秒）
-nrep=100   # フレームの繰り返し回数
+msec=100   # フレームあたりの表示時間（ミリ秒）
+wtime=1000 # 起動時の待ち時間（ミリ秒）
+nrep=28    # フレームの繰り返し回数
 
 ######################################################################
 # 本体処理
@@ -49,16 +49,46 @@ nrep=100   # フレームの繰り返し回数
 
 # 動画を再生して次の処理に進む
 (
-  # ベース画像を入力
-  repeat.sh -n"$nrep" "frame.txt"                                    |
+  {
+    # ベース画像の静止状態
+    repeat.sh -n"5" "text/frame.txt"
+    
+    # ベース画像を入力
+    repeat.sh -n"$nrep" "text/frame.txt"                             |
+    # 灯を点灯
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/r_trace_M.txt"     |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/l_trace_C.txt"     |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/c_trace_Y.txt"     |
+    # 回転
+    ./sinewave.sh -r"$nrow" -c"$ncol" -a"$axis"
 
-  tr 'Ｇ' '■'                                                       |
-  tr 'Ｂ' '■'                                                       |
-  
-  # 回転
-  ./sinewave.sh -r"$nrow" -c"$ncol" -a"$axis"                        |
+    # ベース画像を入力
+    repeat.sh -n"$nrep" "text/frame_M_C.txt"                         |
+    # 回転
+    ./sinewave.sh -r"$nrow" -c"$ncol" -a"$axis"
 
-  tr '■' 'Ｗ'                                                       |
+    # ベース画像を入力
+    repeat.sh -n"$nrep" "text/frame_C_M.txt"                         |
+    # 回転
+    ./sinewave.sh -r"$nrow" -c"$ncol" -a"$axis"
+    
+    # ベース画像を入力
+    repeat.sh -n"$nrep" "text/frame_M_C.txt"                         |
+    # 灯を消灯
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/r_trace_A.txt"     |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/l_trace_A.txt"     |
+    displayignition.sh -r"$nrow" -c"$ncol" -p"crd/c_trace_A.txt"     |
+    # 回転
+    ./sinewave.sh -r"$nrow" -c"$ncol" -a"$axis"
+    
+    # ベース画像の静止状態
+    repeat.sh -n"5" "text/frame.txt"
+  }                                                                  |
+
+  # 土台を上書き
+  overwrite.sh -r"$nrow" -f"text/base.txt"                           |
+
+  # 背景を黒に
   tr '□' 'Ｋ'                                                       |
 
   # アスキーエスケープシーケンスに変換

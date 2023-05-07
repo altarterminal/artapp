@@ -136,8 +136,8 @@ BEGIN {
 
   # 第一行を入力バッファに保存
   for (i = 1; i <= NF; i++) {
-    if ($i == tchar) {
-      pn++; px[pn] = i; py[pn] = 1;
+    if ($i != bchar) {
+      pn++; px[pn] = i; py[pn] = 1; pc[pn] = $i;
       buf[1,i] = bchar;
     } else {
       buf[1,i] = $i;
@@ -153,8 +153,8 @@ BEGIN {
     # 入力した行をバッファに保存
     rowcnt++;
     for (i = 1; i <= NF; i++) {
-      if ($i == tchar) {
-        pn++; px[pn] = i; py[pn] = rowcnt;
+      if ($i != bchar) {
+        pn++; px[pn] = i; py[pn] = rowcnt; pc[pn] = $i;
         buf[rowcnt,i] = bchar;
       } else {
         buf[rowcnt,i] = $i;
@@ -172,7 +172,7 @@ BEGIN {
 
     cxn = round((cx - axis) * ct) + axis;
 
-    buf[cy, cxn] = "■";
+    buf[cy, cxn] = pc[i];
   }
 
   ####################################################################
