@@ -51,13 +51,15 @@ wtime=1000 # 起動時の待ち時間（ミリ秒）
     # 開状態で静止
     repeat.sh -n"20" "text/openbase.txt"
 
-    # 閉じる動作
+    # 内側に向かって閉じる
     repeat.sh -n"30" "text/closebase.txt"                            |
-    closecurtain.sh -r"$nrow" -c"$ncol" -f"text/openpatch.txt" -o"7,17" -i
+    closecurtain.sh -r"$nrow" -c"$ncol"                              \
+                    -f"text/openpatch.txt" -o"7,17" -i
 
-    # 開く動作
+    # 外側に向かって閉じる
     repeat.sh -n"20" "text/openbase.txt"                             |
-    closecurtain.sh -r"$nrow" -c"$ncol" -f"text/closepatch.txt" -o"7,17" 
+    closecurtain.sh -r"$nrow" -c"$ncol"                              \
+                    -f"text/closepatch.txt" -o"7,17"
   }                                                                  |
 
   # 色アルファベットに変換
