@@ -65,6 +65,11 @@
 
 ![デモ画像](./figure/docchi.gif)
 
+#### omakenokojo
+閉城とみせかけて
+
+![デモ画像](./figure/omakenokojo.gif)
+
 #### anotherside
 鏡の向こう側に何が見える？
 
