@@ -7,8 +7,8 @@ set -eu
 
 img='./ebisuicon.jpeg'
 
-nrow=40
-ncol=40
+nrow=41
+ncol=41
 
 ######################################################################
 # 本体処理
@@ -16,11 +16,6 @@ ncol=40
 
 imagedecode -r"$nrow" -c"$ncol" -g "$img"                            |
 
-bright2ascii.sh -n"128" -s"　,■"                                    |
-
-tr '　' 'Ｗ'                                                         |
-tr '■' 'Ｋ'                                                         |
-
-color2escseq.sh                                                      |
+bright2ascii.sh -n"128" -s"□,■"                                    |
 
 cat
