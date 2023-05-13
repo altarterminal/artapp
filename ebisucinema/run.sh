@@ -52,37 +52,37 @@ step=5     # カウンターの表示ピクセルの増分
   {
     # ヱ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/e.txt" -o"0,0"                    |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/e.txt" -o"0,0"          |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
     # ビ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/bi.txt" -o"0,0"                   |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/bi.txt" -o"0,0"         |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
     # ス
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/su.txt" -o"0,0"                   |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/su.txt" -o"0,0"         |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
     # シ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/shi.txt" -o"0,0"                  |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/shi.txt" -o"0,0"        |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
     # ネ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/ne.txt" -o"0,0"                   |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/ne.txt" -o"0,0"         |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 
     # マ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/ma.txt" -o"0,0"                   |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/ma.txt" -o"0,0"         |
     repeat.sh -n"$dframe"                                            |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"$step"
 

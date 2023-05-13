@@ -50,40 +50,40 @@ wtime=1000 # 起動時の待ち時間（ミリ秒）
   {
     # 開状態で静止
     cat "text/base.txt"                                              |
-    overwrite.sh -r"$nrow" -f"text/kai.txt" -o"6,17"                 |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/kai.txt" -o"6,17"       |
     repeat.sh -n"20"
     
     # オ
     cat "text/base.txt"                                              |
-    overwrite.sh -r"$nrow" -f"text/kai.txt" -o"6,17"                 |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/kai.txt" -o"6,17"       |
     repeat.sh -n"30"                                                 |
     closecurtain.sh -r"$nrow" -c"$ncol"                              \
                     -f"text/o_red.txt" -o"6,17" -t"a"
 
     # オ
     cat "text/base.txt"                                              |
-    overwrite.sh -r"$nrow" -f"text/o_red.txt" -o"6,17"               |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/o_red.txt" -o"6,17"     |
     repeat.sh -n"30"                                                 |
     closecurtain.sh -r"$nrow" -c"$ncol"                              \
                     -f"text/o_blue.txt" -o"6,17" -t"a"
 
     # カ
     cat "text/base.txt"                                              |
-    overwrite.sh -r"$nrow" -f"text/o_blue.txt" -o"6,17"              |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/o_blue.txt" -o"6,17"    |
     repeat.sh -n"30"                                                 |
     closecurtain.sh -r"$nrow" -c"$ncol"                              \
                     -f"text/ka.txt" -o"6,17" -t"a"
 
     # ミ
     cat "text/base.txt"                                              |
-    overwrite.sh -r"$nrow" -f"text/ka.txt" -o"6,17"                  |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/ka.txt" -o"6,17"        |
     repeat.sh -n"30"                                                 |
     closecurtain.sh -r"$nrow" -c"$ncol"                              \
                     -f"text/mi.txt" -o"6,17" -t"a"
 
     # 開
     cat "text/base.txt"                                              |
-    overwrite.sh -r"$nrow" -f"text/mi.txt" -o"6,17"                  |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/mi.txt" -o"6,17"        |
     repeat.sh -n"30"                                                 |
     closecurtain.sh -r"$nrow" -c"$ncol"                              \
                     -f"text/kai.txt" -o"6,17" -t"a"

@@ -57,7 +57,7 @@ wtime=1000 # 起動時の待ち時間（ミリ秒）
   repeat.sh -n"$nrep"                                                     |
 
   # 「Traumerei」の文字を上書き
-  overwrite.sh -r"$nrow" -f"text/traumerei.txt" -o"7,28"                  |
+  overwrite.sh -r"$nrow" -c"$ncol" -f"text/traumerei.txt" -o"7,28"        |
   # ディスク部分を回転
   rotate.sh -r"$nrow" -p"28,28,25,-3"                                     |
   # ディスクを下書き
@@ -66,9 +66,9 @@ wtime=1000 # 起動時の待ち時間（ミリ秒）
   displayseries.sh -c"$ncol" -r"$nrow" -p"crd/hole.txt" -l -o"2,2"        |
 
   # アームを上書き
-  overwrite.sh -r"$nrow" -f"text/arm.txt" -o"26,26"                       |
+  overwrite.sh -r"$nrow" -c"$ncol" -f"text/arm.txt" -o"26,26"             |
   # 筐体を上書き
-  overwrite.sh -r"$nrow" -f"text/housing.txt" -o"0,0"                     |
+  overwrite.sh -r"$nrow" -c"$ncol" -f"text/housing.txt" -o"0,0"           |
 
   # ギアを動かす
   displayseries.sh -c"$ncol" -r"$nrow" -p"crd/gear.txt" -l -o"14,59"      |

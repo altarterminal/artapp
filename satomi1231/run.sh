@@ -81,7 +81,7 @@ nrep=200   # フレームの繰り返し回数
   displayseries.sh -c"$ncol" -r"$nrow" -p"crd/fireg.txt"  -w8  -l -o"70,15"    |
   
   # メッセージを上書き
-  overwrite.sh -r"$nrow" -f"text/omedetou.txt"                                 |
+  overwrite.sh -r"$nrow" -c"$ncol" -f"text/omedetou.txt"                       |
 
   # ロボットを上書き
   displaytrack.sh -c"$ncol" -r"$nrow" -p"crd/robot.txt" -w70                   |

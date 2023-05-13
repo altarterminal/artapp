@@ -86,7 +86,7 @@ nrep=28    # フレームの繰り返し回数
   }                                                                  |
 
   # 土台を上書き
-  overwrite.sh -r"$nrow" -f"text/base.txt"                           |
+  overwrite.sh -r"$nrow" -c"$ncol" -f"text/base.txt"                 |
 
   # 背景を黒に
   tr '□' 'Ｋ'                                                       |

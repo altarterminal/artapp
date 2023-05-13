@@ -50,31 +50,31 @@ wtime=1000 # 起動時の待ち時間（ミリ秒）
   {
     # シ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/shi.txt" -o"0,0"                  |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/shi.txt" -o"0,0"        |
     repeat.sh -n"24"                                                 |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"5"
 
     # ネ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/ne.txt" -o"0,0"                   |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/ne.txt" -o"0,0"         |
     repeat.sh -n"24"                                                 |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"5"
 
     # マ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/ma.txt" -o"0,0"                   |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/ma.txt" -o"0,0"         |
     repeat.sh -n"24"                                                 |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"5"
 
     # ネ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/ne.txt" -o"0,0"                   |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/ne.txt" -o"0,0"         |
     repeat.sh -n"24"                                                 |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"5"
 
     # コ
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/ko.txt" -o"0,0"                   |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/ko.txt" -o"0,0"         |
     repeat.sh -n"24"                                                 |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s"5"
 

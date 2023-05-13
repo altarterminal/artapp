@@ -51,19 +51,19 @@ nrep=18    # 数字あたりのフレーム数
   {
     # 3
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/three.txt" -o"15,0"               |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/three.txt" -o"15,0"     |
     repeat.sh -n"$nrep"                                              |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s3
 
     # 2
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/two.txt" -o"15,0"                 |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/two.txt" -o"15,0"       |
     repeat.sh -n"$nrep"                                              |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s3
 
     # 1
     canbas.sh -r"$nrow" -c"$ncol"                                    |
-    overwrite.sh -r"$nrow" -f"text/one.txt" -o"15,0"                 |
+    overwrite.sh -r"$nrow" -c"$ncol" -f"text/one.txt" -o"15,0"       |
     repeat.sh -n"$nrep"                                              |
     displayignition.sh -r"$nrow" -c"$ncol" -p"crd/ccrd.txt" -s3    
   }                                                                  |
