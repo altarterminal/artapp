@@ -61,7 +61,7 @@ wtime=1000 # 起動時の待ち時間（ミリ秒）
   # ディスク部分を回転
   rotate.sh -r"$nrow" -p"28,28,25,-3"                                     |
   # ディスクを下書き
-  underwrite.sh -r"$nrow" -b"text/disk.txt" -o"2,2"                       |
+  underwrite.sh -r"$nrow" -c"$ncol" -b"text/disk.txt" -o"2,2"             |
   # ディスクの縁の穴を動かす
   displayseries.sh -c"$ncol" -r"$nrow" -p"crd/hole.txt" -l -o"2,2"        |
 
