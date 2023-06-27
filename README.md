@@ -75,6 +75,11 @@
 
 ![デモ画像](./figure/anotherside.gif)
 
+#### disknokojo
+円盤の孤城
+
+![デモ画像](./figure/disknokojo.gif)
+
 ### RRR
 
 #### flag
