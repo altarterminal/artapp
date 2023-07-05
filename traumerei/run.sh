@@ -59,7 +59,7 @@ wtime=1000 # 起動時の待ち時間（ミリ秒）
   # 「Traumerei」の文字を上書き
   overwrite.sh -r"$nrow" -c"$ncol" -f"text/traumerei.txt" -o"7,28"        |
   # ディスク部分を回転
-  rotate.sh -r"$nrow" -p"28,28,25,-3"                                     |
+  rotate.sh -r"$nrow" -c"$ncol" -p"28,28,25,-3"                           |
   # ディスクを下書き
   underwrite.sh -r"$nrow" -c"$ncol" -b"text/disk.txt" -o"2,2"             |
   # ディスクの縁の穴を動かす
