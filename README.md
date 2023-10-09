@@ -94,6 +94,13 @@ Load! Aim!! Shoot!!!
 
 ![デモ画像](./figure/koihahikari.gif)
 
+### パプリカ
+
+#### 夢探偵さん
+表の顔と裏の顔
+
+![デモ画像](./figure/tantei.gif)
+
 ### すずめの戸締まり
 
 #### suzume
