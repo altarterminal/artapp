@@ -53,11 +53,11 @@ nrep=100   # 数字あたりのフレーム数
     repeat.sh -n"$nrep" "text/kagamirev.txt"                         |
 
     # 通常文字を矩形領域に表示
-    penetrate.sh -r"$nrow" -c"$ncol"                                 \
+    recpenet.sh -r"$nrow" -c"$ncol"                                  \
                  -d"1,0" -p"-5,1,3,25"  -a"text/kagamired.txt"       |
-    penetrate.sh -r"$nrow" -c"$ncol"                                 \
+    recpenet.sh -r"$nrow" -c"$ncol"                                  \
                  -d"1,0" -p"-8,1,3,25"  -a"text/kagamigreen.txt"     |
-    penetrate.sh -r"$nrow" -c"$ncol"                                 \
+    recpenet.sh -r"$nrow" -c"$ncol"                                  \
                  -d"1,0" -p"-11,1,3,25" -a"text/kagamiblue.txt"
   }                                                                  |
 
