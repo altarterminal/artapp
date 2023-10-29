@@ -33,6 +33,11 @@
 
 ![デモ画像](./figure/darius.gif)
 
+#### anniv2nd
+公開２周年おめでとう
+
+![デモ画像](./figure/anniv2nd.gif)
+
 ### かがみの孤城
 
 #### kagami
